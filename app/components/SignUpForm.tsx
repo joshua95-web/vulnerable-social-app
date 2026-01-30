@@ -16,28 +16,45 @@ export default function SignUpForm() {
   };
 
   return (
-    <main>
-      <div className="min-h-7 w-3xl flex text-center justify-center bg-slate-300 text-black">
-        <form className="text-gray-900" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            placeholder="Create Your Username"
-          />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Set Your Email"
-          />
-          <input
-            type="text"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Create Your Password"
-          />
-          <button type="submit">Submit</button>
+    <main className="min-h-screen flex items-center justify-center font-mono">
+      <div className="rounded-2xl shadow-2xl shadow-amber-700  border-amber-700 border-4 p-10  gap-8 flex flex-col text-center justify-center bg-gray-500 text-slate-200">
+        <h1 className="text-3xl font-bold">Create Your Account</h1>
+        <form
+          className="text-slate-200 flex gap-8 flex-col items-center text-center"
+          onSubmit={handleSubmit}
+        >
+          <div className="flex flex-col text-slate-200 gap-2">
+            <input
+              className="text-amber-300 p-2 font-bold border border-slate-400"
+              name="userName"
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="Create Your Username"
+            />
+            <input
+              className="text-amber-300 p-2 font-bold border border-slate-400"
+              name="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Set Your Email"
+            />
+            <input
+              className="text-amber-300 p-2 font-bold border border-slate-400"
+              name="password"
+              type="text"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Create Your Password"
+            />
+          </div>
+          <button
+            type="submit"
+            className="text-2xl bg-amber-700 p-3 rounded-2xl hover:bg-amber-500 hover:shadow-2xl hover:shadow-amber-500 cursor-pointer"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </main>
