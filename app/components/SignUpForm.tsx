@@ -12,6 +12,10 @@ export default function SignUpForm() {
     e.preventDefault();
     console.log("What's being submitted:", userName, "<user password>", email);
 
+    //Auth0 api for create user here, need to write the action scripts on the auth0 dashboard > authentication > database > custom database.
+    // It will need to have the same hash as the one on the Neon database and compare the two to authenticate, then return the user info needed
+    // for the front end.
+
     await CreateUser(userName, password, email);
   };
 
