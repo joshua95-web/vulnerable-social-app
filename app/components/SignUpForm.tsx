@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { CreateUser } from "../actions/CreateUser";
+import { CreateUser } from "../lib/actions/CreateUser";
 
 export default function SignUpForm() {
   const [userName, setUserName] = useState("");
